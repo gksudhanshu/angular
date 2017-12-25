@@ -1,3 +1,8 @@
+<label>Server name</label>
+<input type="text"
+class="form-control"
+(input)="onCreateServerName($event)">
+<p>{{serverName}}</p>
 <!-- Event binding for click -->
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">
     Add Server
