@@ -1,7 +1,14 @@
 <label>Server name</label>
-<input type="text"
+<!-- <input type="text"
 class="form-control"
 (input)="onCreateServerName($event)">
+<p>{{serverName}}</p> -->
+
+<!-- Same can be done using ngModel -->
+
+<input type="text"
+class="form-control"
+[(ngModel)]="serverName">
 <p>{{serverName}}</p>
 <!-- Event binding for click -->
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">
