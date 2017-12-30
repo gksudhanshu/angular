@@ -16,12 +16,15 @@ class="form-control"
 </button>
 <!-- String Interpolation and property binding will give same result -->
 <!-- String Interpolation -->
-<p>{{ allowNewServer }}</p>
+<!-- <p>{{ allowNewServer }}</p> -->
 <!-- Property binding -->
-<p [innerText]="allowNewServer"></p>
+<!-- <p [innerText]="allowNewServer"></p> -->
 
 <!-- Event binding -->
-<p>{{serverCreationStatus}}</p>
+<p *ngIf="serverCreated; else noServer">Server was created ,name is  {{serverName}}</p>
+<ng-template #noServer>
+    <p>No server was created</p>
+</ng-template>
 
-<app-server></app-server>
+
 <app-server></app-server>
